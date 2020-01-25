@@ -14,29 +14,33 @@ body {
   width: 375px;
   background-color: #fff;
 }
+
+h1 {
+  font-size: 2.5em;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 500;
+  float: right;
+  padding-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.5em;
+  line-height: 1.5;
+}
+
 /***status bar***/
 .sta-bar {
   width: 375px;
   height: 25px;
   padding-right: 1%;
-  background-color: #fff;
+  background-color: #ededed;
 }
 
-.battery {
-  float: right;
-  color: #000;
-  display: inline-block;
-  padding: 4px;
-}
-
-.wifi {
-  float: right;
-  color: #000;
-  display: inline-block;
-  padding: 4px;
-}
-
-.signal {
+.battery, .wifi, .signal {
   float: right;
   color: #000;
   display: inline-block;
@@ -56,53 +60,67 @@ body {
 }
 
 /***navigations and search***/
-.bus-stop {
+.navigation, .stop-name, .search {
   width: 375px;
-  height: 50px;
-  background-color: #2EA19A;
+  background-color: #ededed;
 }
 
 .arrow-left {
-  width: 10%;
-  padding: 15px;
+  width: 5%;
+  padding-left: 15px;
+  padding-top: 15px;
   margin-right: 20px;
   display: inline-block;
 }
 
-.bus-stop h1 {
-  font-size: 2.5em;
-  font-weight: 900;
-  color: #fff;
+.arrow-left > i {
+  color: #007AFF;
 }
 
-.content1 {
+.stop-name {
+  padding: 5%;
+}
+
+.back {
   display: inline-block;
 }
 
+.back h1{
+  font-size: 1.8em;
+  font-weight: 200;
+  color: #007AFF;
+}
+
 .search {
-  width: 375px;
-  height: 40px;
-  background-color: #2EA19A;
+  height:45px;
+  border-bottom: 1px solid #ADADAD;
 }
 
 input {
   width: 75%;
   height: 30px;
-  margin-right: 40px;
+  margin-left: 10px;
   border: none;
-  border-radius: 6px;
-  float: right;
+  border-radius: 8px;
+  background-color: #8e8e93;
+  opacity: 0.2;
+  display: inline-block;
 }
 
 .s-icon {
-  color: #fff;
-  width: 20px;
-  display: inline-block;
+  color: #8e8e93;
   margin-left: 18px;
   margin-top: 5px;
+  display: inline-block;
 }
 
-/*** bus route ***/
+/*** all bus route ***/
+.all-route {
+  height: 391px;
+  overflow: scroll;
+}
+
+/*** live bus route ***/
 .busroute {
   width: 375px;
   height: 70px;
@@ -110,117 +128,53 @@ input {
 }
 
 .busroute:hover {
-  background-color: #F2F2F2;
+  background-color: #ededed;
 }
 
-.content2 {
+.out-of-service:hover {
+  background-color: #ededed;
+}
+
+.busline-destination {
   width: 63%;
   padding-top: 2%;
   padding-left: 5%;
   display: inline-block;
 }
 
-.content3 {
+.bus-time {
   width: 25%;
   padding-top: 6%;
   display: inline-block;
 }
 
-.bus h1 {
-  font-size: 2.5em;
-  font-weight: 900;
+.live-route h2 {
   color: #2EA19A;
 }
 
-.bus h2 {
-  font-size: 2em;
-  font-weight: 900;
-  color: #2EA19A;
-  float: right;
-  padding-bottom: 20px;
-}
-
-.bus h3 {
-  font-size: 1.5em;
-  line-height: 1.5;
-}
-
-
-/*** Reroute and Out of Service ***/
-.reroute {
+/*** out-of-service ***/
+.out-of-service {
   width: 375px;
   height: 70px;
   border-bottom: 1px solid #ADADAD;
 }
 
-.reroute h1 {
-  font-size: 2.5em;
-  font-weight: 900;
+.out-of-service h1 {
   color: #7d7d7d;
 }
 
-.reroute h2 {
-  font-size: 2em;
-  font-weight: 900;
-  float: right;
-  padding-bottom: 20px;
+.out-of-service h2 {
   color: #7d7d7d;
 }
 
-.reroute h3 {
-  font-size: 1.5em;
-  line-height: 1.5;
+.out-of-service h3 {
   color: #7d7d7d;
-}
-
-.content4 {
-  width: 50%;
-  padding-top: 2%;
-  padding-left: 5%;
-  display: inline-block;
-}
-
-.content5 {
-  width: 25%;
-  padding-top: 6%;
-  display: inline-block;
-}
-
-.label1 {
-  padding-left: 5%;
-  padding-top: 12px;
-  display: inline-block;
-}
-
-.label2 {
-  padding-left: 5%;
-  padding-top: 12px;
-  display: inline-block;
-  float: right;
-  padding-right: 10%;
-}
-
-.label1 h1 {
-  font-size: 1.7em;
-  font-weight: 900;
-}
-
-.label2 h1 {
-  font-size: 1.7em;
-  font-weight: 900;
 }
 
 .arrow {
   width: 10%;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  padding-right: 3%;
+  padding: 5%;
   float: right;
   margin-top: 4px;
-  display: inline-block;
   color: #979797;
-}
-
-.arrow > i {
-  float: right;
 }
