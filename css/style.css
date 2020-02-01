@@ -2,14 +2,21 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+
 body {
   background-color: #333;
-  font-family: Helvetica;
+  font-family: "system";
   font-size: 10px;
 }
 
 .container {
-  margin: 100px;
+  margin: 100px auto;
   padding-top: 3px;
   width: 375px;
   background-color: #fff;
@@ -21,10 +28,10 @@ h1 {
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 500;
   float: right;
-  padding-bottom: 20px;
+  text-align: right;
 }
 
 h3 {
@@ -97,13 +104,13 @@ h3 {
 }
 
 input {
-  width: 75%;
+  width: 80%;
   height: 30px;
+  font-size: 1.5em;
   margin-left: 10px;
+  padding-left: 10px;
   border: none;
   border-radius: 8px;
-  background-color: #8e8e93;
-  opacity: 0.2;
   display: inline-block;
 }
 
@@ -124,7 +131,7 @@ input {
 .busroute {
   width: 375px;
   height: 70px;
-  border-bottom: 1px solid #ADADAD;
+  border-bottom: solid 1px #ADADAD;
 }
 
 .busroute:hover {
@@ -136,15 +143,30 @@ input {
 }
 
 .busline-destination {
-  width: 63%;
-  padding-top: 2%;
+  width: 65%;
   padding-left: 5%;
+  margin-top: 10px;
   display: inline-block;
 }
 
 .bus-time {
   width: 25%;
-  padding-top: 6%;
+  height: 50px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.line-destination {
+  width: 55%;
+  padding-left: 5%;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.resume-time {
+  width: 35%;
+  height: 50px;
+  vertical-align: middle;
   display: inline-block;
 }
 
@@ -156,7 +178,7 @@ input {
 .out-of-service {
   width: 375px;
   height: 70px;
-  border-bottom: 1px solid #ADADAD;
+  border-bottom: solid 1px #ADADAD;
 }
 
 .out-of-service h1 {
@@ -172,9 +194,9 @@ input {
 }
 
 .arrow {
-  width: 10%;
-  padding: 5%;
-  float: right;
+  padding: 5% 0;
   margin-top: 4px;
+  margin-right: 10px;
+  float: right;
   color: #979797;
 }
